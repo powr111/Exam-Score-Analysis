@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block title %}DataBrain | Diagnostic Analysis{% endblock %}
+{% block meat%}
+<h2>Key Components of Diagnostic Analysis:</h2>
+    <ul>
+        <li>
+            <strong>Data Correlation</strong>: Diagnostic analysis often involves identifying correlations between variables to understand relationships. For example, you might explore the correlation between marketing spend and sales to understand if higher spending led to increased sales.
+        </li>
+        <li>
+            <strong>Drill-Down Analysis</strong>: This involves breaking down data into more detailed segments to identify patterns or anomalies that may explain the results.
+        </li>
+        <li>
+            <strong>Hypothesis Testing</strong>: Diagnostic analysis may involve testing hypotheses to determine whether certain factors are likely to have caused the observed outcomes.
+        </li>
+    </ul>
+
+    <h2>Purpose and Applications:</h2>
+    <ul>
+        <li><strong>Problem-Solving</strong>: Diagnostic analysis helps organizations understand the root cause of problems or failures, such as why sales dropped or why a system failed.</li>
+        <li><strong>Improvement</strong>: By identifying causes, organizations can implement targeted improvements to processes or strategies.</li>
+        <li><strong>Decision-Making</strong>: Diagnostic analysis supports decision-making by providing a deeper understanding of the factors that drive outcomes.</li>
+    </ul>
+
+    <h2>Example:</h2>
+    <p>Suppose a company notices a sudden drop in product sales. Diagnostic analysis would explore various factors such as changes in market conditions, competitor actions, or internal issues like supply chain disruptions, to identify the root cause of the sales decline.</p>
+    <p>In the case of our dataset. We can check if the education of the parents has any significant impact on the students, performance in maths.</p>
+    <div class="hero-image">
+        <img src="..\statics\maths.jpeg" alt="histogram of maths scores">
+    </div>
+    <div class="subtext">
+        <!-- we might want to change the diagram to fit the goal stated in the text-->
+        <p>The histogram of the math scores of all students</p>
+    </div>
+    <p>We can then from this make inferances on how the student scores are impacted by the education of their parents and we can chekc this by performing a hypothesis test with the <strong>scipy.stats</strong> moduel which can then be used to check if the mean of that sample would be given purely by chance or if there was some significant impact on the scores formt he education.</p>
+    <p>From the test we get that the p value was {{test_p}} and the test value was {{test_val}} which can tell us that the chance of getting a sample mean value this extreme and our is evtremely extreme! We can prove this by using scipy.stats.t.ppf and them we can see that because {{decide}} is greater than {{test_p}} we can say we must reject the null hypothesis and we can assume that the education does have a significant impact on the scores of the students.</p>
+{%endblock%}

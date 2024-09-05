@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+    <title>{% block  title %} DataBrain | Home {% endblock %}</title>
+</head>
+<body>
+    <nav>
+        <div class="logo">Analyis on Student Performance</div>
+        <div class="nav-items">
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/analysis-types">Types of Data Analyis</a>
+        </div>
+    </nav>
+    <div class="hero-container">
+        {% block meat %}
+
+        {% endblock %}
+    </div>
+    <footer>
+        <p>&copy; 2024 Data Science Website</p>
+    </footer>
+</body>
+</html>

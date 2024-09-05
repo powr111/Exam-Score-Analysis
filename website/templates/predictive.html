@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}DataBrain | Predictive Analysis{% endblock %}
+{% block meat%}
+<h1>Predictive Analysis</h1>
+<p>Predictive analysis is a type of data analysis that uses historical data, statistical algorithms, and machine learning techniques to make predictions about future events or outcomes. Unlike descriptive analysis, which focuses on summarizing data, predictive analysis aims to forecast what is likely to happen based on patterns observed in past data.</p>
+
+<h2>Key Components of Predictive Analysis:</h2>
+<ul>
+    <li>
+        <strong>Historical Data</strong>: Predictive analysis relies on past data to find patterns and trends that can be used to make future predictions.
+    </li>
+    <li>
+        <strong>Statistical Models</strong>: Techniques like regression analysis, time series analysis, and machine learning algorithms are used to create models that predict future outcomes.
+    </li>
+    <li>
+        <strong>Machine Learning</strong>: Advanced predictive analysis often uses machine learning models that can improve predictions as they process more data.
+    </li>
+</ul>
+
+<h2>Purpose and Applications:</h2>
+<ul>
+    <li><strong>Forecasting</strong>: Predictive analysis is widely used in business, finance, and healthcare to forecast future trends, such as sales forecasts or patient outcomes.</li>
+    <li><strong>Risk Management</strong>: It helps in identifying potential risks, like predicting which customers are most likely to default on a loan.</li>
+    <li><strong>Optimization</strong>: Businesses use predictive analysis to optimize resources, such as inventory management or workforce scheduling.</li>
+</ul>
+
+<h2>Example:</h2>
+<p>In our case, we might like to predict if a student will be on test preperation or not based on thier test scores and backgroud which could help a university decide if it would want to accept or reject an application based on this as not every student would have the oppertunities to get these. This is also because, many students might either lie on applications or not have the ability to provide evidence for having test preperation courses done. So adding an extra layer of varificaiton for applications could prove beneficial.</p>
+<p>The model for this prediction will be a supervised one. This means that we use labeled training data while unsupervised doesn't. In specific we will be using knn-cluster classification which will check how spread out data points are from eachother and based on this it will classify it. We will test the model on 80% of the data and test it on the rest. We from this found that there was an accuracy of {{accuracy}} which means that the model isn't just accurate but can be considered cutting edge.</p>
+<p>We can change the accuracy of the model by providing it a different number of data points at a time currently we are using 12.</p>
+{%endblock%}

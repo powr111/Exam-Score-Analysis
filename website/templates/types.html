@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}DataBrain | Data Analyis Types{% endblock %}
+{% block meat%}
+<h2>Types of data analysis</h2>
+<p>There are many different types of data analysis and here are examples of how these concepts are used, the areas which will be addressed here are <a href="/descriptive">descriptive analysis</a>,<a href="/diagnostic">diagnostic analysis</a>, and <a href="/predictive">predictive analysis</a>.</p>
+<p>It's also important to understand the dataset being worked with and so here there's a description of it.</p>
+<div class="data_frame">
+    {{df_html | safe}}
+</div>
+<p>Keep in mind this is only the first ten rows as to perform proper analysis we must have far more training data</p>
+<!-- to present the data frame to the users we should use df.to_html and then send it in to present it here! -->
+{%endblock%}

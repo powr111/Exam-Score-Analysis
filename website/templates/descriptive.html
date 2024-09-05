@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% block title %}DataBrain | Descriptive Analysis{% endblock %}
+{% block meat%}
+<h1>Descriptive Analysis</h1>
+    <p>Descriptive analysis, also known as descriptive statistics, is a method of summarizing and presenting data in a way that makes it easier to understand. This type of analysis focuses on describing the main features of a dataset through various statistical measures. It doesn’t involve making predictions or inferences about the data but instead provides a clear snapshot of the data's characteristics.</p>
+
+    <h2>Key Components of Descriptive Analysis:</h2>
+    <ul>
+        <li>
+            <strong>Measures of Central Tendency</strong>: These metrics describe the center or average of a dataset. Common measures include:
+            <ul>
+                <li><strong>Mean</strong>: The average of all data points.</li>
+                <li><strong>Median</strong>: The middle value when the data points are ordered.</li>
+                <li><strong>Mode</strong>: The most frequently occurring value in the dataset.</li>
+            </ul>
+        </li>
+        <li>
+            <strong>Measures of Dispersion (or Variability)</strong>: These metrics describe the spread or variability of the data.
+            <ul>
+                <li><strong>Range</strong>: The difference between the maximum and minimum values.</li>
+                <li><strong>Variance</strong>: Measures how far the data points are spread out from the mean.</li>
+                <li><strong>Standard Deviation</strong>: The square root of the variance, providing a sense of how much the data varies from the mean in the same units as the data.</li>
+            </ul>
+        </li>
+        <li>
+            <strong>Measures of Shape</strong>: These metrics describe the shape of the data distribution.
+            <ul>
+                <li><strong>Skewness</strong>: Describes the asymmetry of the data distribution. A positive skew means the tail on the right side is longer, and a negative skew means the tail on the left is longer.</li>
+                <li><strong>Kurtosis</strong>: Describes the "tailedness" of the distribution, indicating whether the data have heavy or light tails compared to a normal distribution.</li>
+            </ul>
+        </li>
+        <li>
+            <strong>Visualization Tools</strong>: Descriptive analysis often involves visual representations of data to make patterns more evident.
+            <ul>
+                <li><strong>Histograms</strong>: Display the distribution of a dataset.</li>
+                <li><strong>Box Plots</strong>: Show the distribution of data based on a five-number summary (minimum, first quartile, median, third quartile, maximum).</li>
+                <li><strong>Bar Charts, Pie Charts, and Line Graphs</strong>: Used to visualize categorical or time series data.</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h2>Purpose and Applications:</h2>
+    <ul>
+        <li><strong>Summarizing Data</strong>: Descriptive analysis helps summarize large datasets into understandable formats.</li>
+        <li><strong>Identifying Patterns</strong>: It reveals patterns, trends, and outliers in the data.</li>
+        <li><strong>Making Data-Driven Decisions</strong>: In business, healthcare, research, and other fields, descriptive analysis provides a basis for decision-making by highlighting key trends and patterns.</li>
+    </ul>
+
+    <h2>Example 1:</h2>
+    <p>The mean of students who's parents have an associates degree and those with high school education: {{associates_mean | safe}}, {{highschool_mean | safe}} and so we can say that there <strong>might</strong> be some importance of the education of parents on the math scores of students. We can't say this with certainty as there's potential for there to be no causal link</p>
+    
+    <h2>Example 2:</h2>
+    <div class="hero-image">
+        <img src="..\statics\meals.jpeg" alt="meals data">
+    </div>
+
+    <div class="subtext">
+        <p> Here we can see the number of students who are on free or reduced cost school meals.</p>
+    </div>
+
+    <p>In summary, descriptive analysis is a foundational step in data analysis, offering insights into the basic structure and characteristics of a dataset.</p>
+{%endblock%}
